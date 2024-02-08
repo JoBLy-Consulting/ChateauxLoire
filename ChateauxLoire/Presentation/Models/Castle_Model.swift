@@ -6,7 +6,7 @@
 //
 import Foundation
 
-public struct Castle_Model:Identifiable, Codable {
+public struct Castle_Model:Identifiable, Codable, Equatable {
     public let id = UUID()
     
     let name:String

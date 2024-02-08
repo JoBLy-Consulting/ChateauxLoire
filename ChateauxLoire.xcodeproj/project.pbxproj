@@ -11,6 +11,7 @@
 		E607A87D2B75116A00E97467 /* Locations.json in Resources */ = {isa = PBXBuildFile; fileRef = E607A87C2B75116A00E97467 /* Locations.json */; };
 		E607A8812B751C5900E97467 /* Castles_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A8802B751C5900E97467 /* Castles_Controller.swift */; };
 		E607A8832B751D0D00E97467 /* Castles_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A8822B751D0D00E97467 /* Castles_ViewModel.swift */; };
+		E607A8852B75536100E97467 /* LocationLookAroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A8842B75536100E97467 /* LocationLookAroundView.swift */; };
 		E66566FC2B7507A600157E04 /* ChateauxLoireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66566FB2B7507A600157E04 /* ChateauxLoireApp.swift */; };
 		E66566FE2B7507A600157E04 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66566FD2B7507A600157E04 /* MapView.swift */; };
 		E66567002B7507A700157E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66566FF2B7507A700157E04 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		E607A87C2B75116A00E97467 /* Locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Locations.json; sourceTree = "<group>"; };
 		E607A8802B751C5900E97467 /* Castles_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castles_Controller.swift; sourceTree = "<group>"; };
 		E607A8822B751D0D00E97467 /* Castles_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castles_ViewModel.swift; sourceTree = "<group>"; };
+		E607A8842B75536100E97467 /* LocationLookAroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookAroundView.swift; sourceTree = "<group>"; };
 		E66566F82B7507A600157E04 /* ChateauxLoire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChateauxLoire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66566FB2B7507A600157E04 /* ChateauxLoireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateauxLoireApp.swift; sourceTree = "<group>"; };
 		E66566FD2B7507A600157E04 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				E66566FD2B7507A600157E04 /* MapView.swift */,
+				E607A8842B75536100E97467 /* LocationLookAroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E66566FE2B7507A600157E04 /* MapView.swift in Sources */,
+				E607A8852B75536100E97467 /* LocationLookAroundView.swift in Sources */,
 				E607A87A2B75100400E97467 /* Castle_Model.swift in Sources */,
 				E607A8832B751D0D00E97467 /* Castles_ViewModel.swift in Sources */,
 				E665670C2B75093800157E04 /* DataConnector.swift in Sources */,

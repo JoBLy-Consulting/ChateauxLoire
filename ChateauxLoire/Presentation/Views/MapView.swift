@@ -36,6 +36,16 @@ struct MapView: View {
         .safeAreaInset(edge: .bottom) {
             HStack{
                 Spacer()
+                VStack(spacing:0){
+                    if let selectedCastle {
+                        if let item = _castles_ViewModel._castles.first(where: {$0.id == selectedCastle}) {
+                            LocationLookAroundView(selectedLocation: item)
+                                .frame(height: 128)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                                .padding([.top, .horizontal])
+                        }
+                    }
+                }
                 Button(action: {
                     position = .automatic
                 }, label: {
@@ -47,6 +57,10 @@ struct MapView: View {
             }
             .background(.white)
             .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+        }
+        .onChange(of: selectedCastle) {
+            guard let selectedCastle else { return}
+            guard let item = _castles_ViewModel._castles.first(where: {$0.id == selectedCastle}) else { return }
         }
         .onAppear(perform: {
             Task {
