@@ -11,10 +11,11 @@ import MapKit
 struct MapView: View {
     var _castles_ViewModel = Castles_ViewModel()
     @State private var position:MapCameraPosition = .automatic
+    @State private var selectedCastle: UUID?
     
     var body: some View {
         
-        Map(position: $position) {
+        Map(position: $position, selection: $selectedCastle) {
             ForEach(_castles_ViewModel._castles, id:\.id){ castle in
                 Annotation(castle.name, coordinate: CLLocationCoordinate2D(latitude: castle.latitude, longitude: castle.longitude),anchor: .bottom) {
                     ZStack{
@@ -23,8 +24,13 @@ struct MapView: View {
                         Image(systemName: "house.lodge.fill").padding(5).foregroundStyle(.purple)
                     }
                 }
+                .tag(castle.id)
             }
             
+        }
+        .mapControls{
+            MapUserLocationButton()
+            MapPitchToggle()
         }
         .mapStyle(.hybrid(elevation:.realistic))
         .safeAreaInset(edge: .bottom) {
