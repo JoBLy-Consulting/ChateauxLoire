@@ -15,7 +15,13 @@ struct MapView: View {
         
         Map {
             ForEach(_castles_ViewModel._castles, id:\.id){ castle in
-                Marker(castle.name, coordinate: CLLocationCoordinate2D(latitude: castle.latitude, longitude: castle.longitude))
+                Annotation(castle.name, coordinate: CLLocationCoordinate2D(latitude: castle.latitude, longitude: castle.longitude),anchor: .bottom) {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5).fill(.background)
+                        RoundedRectangle(cornerRadius: 5).stroke(.purple)
+                        Image(systemName: "house.lodge.fill").padding(5).foregroundStyle(.purple)
+                    }
+                }
             }
             
         }
