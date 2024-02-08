@@ -25,6 +25,7 @@ struct MapView: View {
             }
             
         }
+        .mapStyle(.hybrid(elevation:.realistic))
         .onAppear(perform: {
             Task {
                 await _castles_ViewModel.getCastles()
